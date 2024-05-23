@@ -1,0 +1,11 @@
+name: second flow
+on:
+  issues:
+    types: [opened, edited, milestoned, deleted]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Output Github Context
+      run: echo "${{ toJSON(github) }}"
+  
